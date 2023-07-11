@@ -120,7 +120,7 @@ console.log(num5);
 */
 var arr = [13,23,12,45,22,48,66,100];
 for (var a = 0; a < arr.length; a++) {
-  if (arr[a] % 2 === 0) {
+  if (arr[a] % 2 == 0) {
     console.log(arr[a]);
   }
 }
@@ -139,8 +139,20 @@ for (var a = 0; a < arr.length; a++) {
    1 2 3 4 5 6 7 8 
 
 */
+
+
+
  /* 
  Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
 let x = "don’t know why"
 
 */
+ x = "don’t know why"; 
+if (x.includes("y")) {
+  console.log("yes")
+
+}
+else{
+  console.log("No")
+}
+
