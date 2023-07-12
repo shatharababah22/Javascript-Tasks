@@ -140,7 +140,14 @@ for (var a = 0; a < arr.length; a++) {
 
 */
 
-
+s=" ";
+for(let l=1; l<9;l++){
+    for(let j=1 ; j<=l ; j++){
+     s+=j;    
+}
+  s+=`<br>`
+}
+document.write(s)
 
  /* 
  Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
