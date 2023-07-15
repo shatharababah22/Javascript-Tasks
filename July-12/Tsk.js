@@ -89,7 +89,7 @@ Ex: multiply(3,4)
 Ex: multiply(5,4)
 => 20
 */
-function multiply(s=3,d=8) {
+function multiply(s=3,d) {
    let e=s*d;
    console.log(e) ;
 }
@@ -197,15 +197,15 @@ function smallerNubmer(d,f,h) {
     if (h<smallest) {
         smallest=h; 
     }
-    else  (f<smallest)
+    else if (f<smallest)
     {
         smallest=f; 
     }
-    
-  
+   
     console.log(smallest)
 }
-smallerNubmer(12,10,11)
+smallerNubmer(5,12
+    ,11)
 
 // Write a function called shorterString
 // that accept five string as an arguments,
@@ -244,6 +244,8 @@ shorterString("air","by","car","github","tr");
 /*
 14
 Write a function called longerString
+
+
 that accept four string as an arguments,
 and return the first longer string
 
@@ -535,13 +537,15 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
-var r =counter();
+
 function resetcounter() {
-    return --r;
+    let m=x;
+    x=0;
+    console.log(m +"and the counter reset now")
     
   }
-  console.log(resetcounter()+" and the counter reset now")
-  console.log(resetcounter())
-  console.log(resetcounter())
-  console.log(resetcounter())
+  resetcounter()
+console.log(counter())
+console.log(counter())
+console.log(counter())
 
