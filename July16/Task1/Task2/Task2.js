@@ -47,30 +47,30 @@ h.innerHTML="Sipling:"+localStorage.getItem("Sipling")+"<br><br>description:"+lo
   }
 
 
-  function load() {
+//   function load() {
       
-    const savedValue = localStorage.getItem("name");
-    const savedvalue2=localStorage.getItemJSON.parse("age");
-    const savedvalue3=localStorage.getItem("Gender");
-    const savedvalue4=localStorage.getItem("Birthday");
-    const savedvalue5=localStorage.getItem("Descrption");
-    const savedvalue6=localStorage.getItem("Major");
-    const savedvalue7=localStorage.getItem("Sipling");
-    const savedvalue8=localStorage.getItem("descr");
+//     const savedValue = localStorage.getItem("name");
+//     const savedvalue2=localStorage.getItemJSON.parse("age");
+//     const savedvalue3=localStorage.getItem("Gender");
+//     const savedvalue4=localStorage.getItem("Birthday");
+//     const savedvalue5=localStorage.getItem("Descrption");
+//     const savedvalue6=localStorage.getItem("Major");
+//     const savedvalue7=localStorage.getItem("Sipling");
+//     const savedvalue8=localStorage.getItem("descr");
 
-    if (savedValue&&savedvalue2&&savedvalue3&&savedvalue4&&
-        savedvalue5&&savedvalue6&&savedvalue7&&savedvalue8) {
-    Name.value = savedValue;
-    Age.value = savedvalue2;
-    G.value = savedvalue3;
-    Birth.value = savedvalue4;
-    descreption.value = savedvalue5;
-    Major.value = savedvalue6;
-    x.value = savedvalue7;
-    t.value = savedvalue8;
+//     if (savedValue&&savedvalue2&&savedvalue3&&savedvalue4&&
+//         savedvalue5&&savedvalue6&&savedvalue7&&savedvalue8) {
+//     Name.value = savedValue;
+//     Age.value = savedvalue2;
+//     G.value = savedvalue3;
+//     Birth.value = savedvalue4;
+//     descreption.value = savedvalue5;
+//     Major.value = savedvalue6;
+//     x.value = savedvalue7;
+//     t.value = savedvalue8;
      
-    }
+//     }
 
  
-  }
-  document.addEventListener("DOMContentLoaded", load);
+//   }
+//   document.addEventListener("DOMContentLoaded", load);
