@@ -42,8 +42,7 @@ function save() {
    +"<br><br>Birthday:"+localStorage.getItem("Birthday")+"<br><br>Image:"+localStorage.getItem("Image");
 p.innerHTML="Description"+localStorage.getItem("Descrption")+"<br><br>Univercity && Major"+localStorage.getItem("Major")
 h.innerHTML="Sipling:"+localStorage.getItem("Sipling")+"<br><br>description:"+localStorage.getItem("descr");
-
-   
+ 
   }
 
 

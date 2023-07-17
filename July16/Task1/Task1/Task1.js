@@ -2,9 +2,7 @@ const x = document.getElementById("color");
 
 
 const h = window.sessionStorage.getItem("color");
-if (h) {
-    document.body.style.background = h;
-}
+
 
 
 x.addEventListener("click", function () {
@@ -12,3 +10,6 @@ x.addEventListener("click", function () {
     document.body.style.background = y;
     window.sessionStorage.setItem("color",y);
 });
+if (h) {
+    document.body.style.background = h;
+}
