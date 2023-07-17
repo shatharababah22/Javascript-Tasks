@@ -1,3 +1,6 @@
 {
-    "livePreview.defaultPreviewPath": "/July 13.html/Task.html"
+    "livePreview.defaultPreviewPath": "/July 13.html/Task.html",
+    "editor.cursorBlinking": "expand",
+    "editor.wrappingStrategy": "simple",
+    "editor.cursorStyle": "block"
 }
