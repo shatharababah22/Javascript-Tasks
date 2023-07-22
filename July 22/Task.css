@@ -1,0 +1,47 @@
+body{
+background-image: url(./image.avif);
+background-size: 100%;
+background-repeat: no-repeat;
+
+
+}
+.div1{margin-top: 70px;
+    margin-left: 70px;
+    padding-left: 40px;
+    background-color:rgba(250, 248, 248, 0.4);
+width: 28%;
+height: 600px;;
+
+}
+h1{
+
+    color: rgb(84,118,50);
+     text-align: center;
+     padding-right: 40px;
+    font-style: italic;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; 
+      font-size: 40px;
+}
+#text{
+    border: 2px darkgreen dotted;
+   
+    border-radius: 10px;
+width: 80%;
+height: 33px;
+
+
+}
+button{border-radius: 10px;
+    border: 2px darkgreen dotted;
+    background-color: rgb(109, 147, 71);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(37, 50, 24);
+    height: 35px;
+    
+}
+#search{ border: 2px darkgreen dotted;
+     
+    border-radius: 10px;
+    width: 70%;
+    height: 37px;
+}
