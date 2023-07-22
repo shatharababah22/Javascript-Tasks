@@ -231,7 +231,8 @@ let arrmakeStrings=[
 
 if (e.name=="Angelina Jolie" || e.name=="Bob Ziroll")
 return `${e.name} can go to The Matrix`
-else return `${e.name}is under age!!`
+else
+ return `${e.name}is under age!!`
 
   }
 
