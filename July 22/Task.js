@@ -2,7 +2,7 @@
 const taskList = document.getElementById("taskList");
 const addButton = document.getElementById("addButton");
 const text = document.getElementById("text");
-const localStorageKey = "tasks";
+const KEY1 = "tasks";
 
 // Load tasks from the API and localStorage on page load
 window.addEventListener("load", () => {
@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
     .then((response) => response.json())
     .then((data) => {
       data.forEach((task) => {
-        createTaskElement(task.name, task.id);
+        createtask(task.name, task.id);
       });
     });
 
@@ -19,8 +19,8 @@ window.addEventListener("load", () => {
 addButton.addEventListener("click", () => {
   const taskName = text.value.trim();
   if (taskName !== "") {
-    addTaskToLocalStorage(taskName);
-    createTaskElement(taskName);
+    addtolo(taskName);
+    createtask(taskName);
     text.value = "";
   }
 });
@@ -33,41 +33,50 @@ text.addEventListener("keypress", (event) => {
 
 
 
-function addTaskToLocalStorage(taskName) {
-  const tasks = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+function addtolo(taskName) {
+  const tasks = JSON.parse(localStorage.getItem(KEY1) || "[]");
   tasks.push(taskName);
-  localStorage.setItem(localStorageKey, JSON.stringify(tasks));
+  localStorage.setItem(KEY1, JSON.stringify(tasks));
 }
 
 
-function createTaskElement(taskName, taskId) {
-  const taskDiv = document.createElement("div");
-  taskDiv.textContent = taskName;
+function createtask(taskName, taskId) {
+  
+  const Div1 = `<div></div>`;
+   const Div = document.createElement("div");
+   Div.style.marginTop="10px"
+   Div.style.fontSize="20px"
+   Div.style.color=" rgb(84,118,50)"
+   Div.textContent=taskName;
+  const Ubu = document.createElement("button");
+  Ubu.textContent = "Update";
+  Ubu.style.marginRight="20px"
+  Ubu.style.marginLeft="150px"
+  Ubu.style.width="100px"
 
-  const updateButton = document.createElement("button");
-  updateButton.textContent = "Update";
-  updateButton.addEventListener("click", () => {
+  Ubu.addEventListener("click", () => {
     const updatedTaskName = prompt("Enter the updated task:", taskName);
     if (updatedTaskName !== null && updatedTaskName.trim() !== "") {
       updateTaskInLocalStorage(taskName, updatedTaskName);
-      taskDiv.textContent = updatedTaskName;
+      Div.textContent = updatedTaskName;
     }
   });
 
-  const deleteButton = document.createElement("button");
-  deleteButton.textContent = "Delete";
-  deleteButton.addEventListener("click", () => {
-    deleteTaskFromLocalStorage(taskName);
-    taskDiv.remove();
+  const Dbu = document.createElement("button");
+  Dbu.textContent = "Delete";
+  Dbu.style.width="100px"
+  Dbu.addEventListener("click", () => {
+    delefromlo(taskName);
+    Div.remove();
   });
 
-  taskDiv.appendChild(updateButton);
-  taskDiv.appendChild(deleteButton);
-  taskList.appendChild(taskDiv);
+  Div.appendChild(Ubu);
+  Div.appendChild(Dbu);
+  taskList.appendChild(Div);
 }
 
-function deleteTaskFromLocalStorage(taskName) {
-  const tasks = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+function delefromlo(taskName) {
+  const tasks = JSON.parse(localStorage.getItem(KEY1) || "[]");
   const updatedTasks = tasks.filter((task) => task !== taskName);
-  localStorage.setItem(localStorageKey, JSON.stringify(updatedTasks));
+  localStorage.setItem(KEY1, JSON.stringify(updatedTasks));
 }
