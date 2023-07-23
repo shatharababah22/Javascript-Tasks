@@ -167,4 +167,5 @@ function vowelCount(str) {
   
     return result;
   }
+  
   console.log(vowelCount(str))

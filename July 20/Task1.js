@@ -278,8 +278,7 @@ let arr5=["alex","mercer","madrasa","rashed2","emad","hala"]
 return elemant.length < num
 
   })
-
-
+  
   return n
  }
   

@@ -1,5 +1,5 @@
 // JavaScript
-const taskList = document.getElementById("taskList");
+const taskList = document.getElementById("List");
 const addButton = document.getElementById("addButton");
 const text = document.getElementById("text");
 const KEY1 = "tasks";
@@ -66,7 +66,7 @@ function createtask(taskName, taskId) {
   Dbu.textContent = "Delete";
   Dbu.style.width="100px"
   Dbu.addEventListener("click", () => {
-    delefromlo(taskName);
+    // delefromlo(taskName);
     Div.remove();
   });
 
@@ -74,9 +74,14 @@ function createtask(taskName, taskId) {
   Div.appendChild(Dbu);
   taskList.appendChild(Div);
 }
-
-function delefromlo(taskName) {
+function updateTaskInLocalStorage(oldTaskName, newTaskName) {
   const tasks = JSON.parse(localStorage.getItem(KEY1) || "[]");
-  const updatedTasks = tasks.filter((task) => task !== taskName);
+  const updatedTasks = tasks.map((task) => (task === oldTaskName ? newTaskName : task));
   localStorage.setItem(KEY1, JSON.stringify(updatedTasks));
 }
+
+// function delefromlo(taskName) {
+//   const tasks = JSON.parse(localStorage.getItem(KEY1) || "[]");
+//   const updatedTasks = tasks.filter((task) => task !== taskName);
+//   localStorage.setItem(KEY1, JSON.stringify(updatedTasks));
+// }
