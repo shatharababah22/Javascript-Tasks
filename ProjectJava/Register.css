@@ -1,0 +1,157 @@
+.container-fluid{
+    width: 100%;
+    height: 750px;
+    padding: 0px;
+}
+.photo3{
+height: 750px;
+width: 100%;
+
+}
+.h1{margin-top: 45px;
+text-align: center;
+color:rgb(47,139,196);
+font-family: 'Fredoka', sans-serif;
+font-weight: 300;
+}
+.col-sm-6{
+    background-color: #F2F9FC;
+}
+#contaner{border: 3px dashed rgb(47,139,196);
+    border-radius: 100px;
+    height: 600px;
+width: 80%;
+margin-top: 100px;
+margin-left: 50px;
+
+}
+#registerForm{
+
+    padding-top: 45px;
+
+}
+.start{
+margin-left: 50px;
+    border: 1px rgb(12, 80, 132) double;
+    border-radius: 15px;
+width: 85%;
+height: 60px;
+text-align: center;
+color:rgb(47,139,196);
+font-weight: 300;
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
+background-color: #FBFBFC;
+}
+/* .start2{
+
+    margin-left: 10px;
+    
+}
+.start4{
+
+    margin-left: 160px;
+} */
+.start1{
+
+margin-top: 20px;
+margin-left: 160px;
+border: 1px rgb(12, 80, 132) double;
+border-radius: 10px;
+color:rgb(47,139,196);
+font-weight: 800;
+font-size: 18px;
+width: 40%;
+height: 60px;
+background-color: #FBFBFC;
+}
+.start1:hover{
+    border:2px dotted rgb(47,139,196) ;
+    box-shadow: 3px 2px 2px 1px rgb(47,139,196);
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px){
+
+    #contaner{
+        margin-top: 2px;
+        width: 100%;
+        margin-left: 5px;
+        height: 500px;
+    }
+    .start{
+        width: 70%;
+        height: 45px;
+        margin-left: 70px;
+        
+    }
+   .start1{
+    width: 30%;
+    height: 45px;
+   }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 786px){
+    #contaner{
+        margin-top: 2px;
+        width: 100%;
+        margin-left: 5px;
+        height: 420px;
+    }
+    .h1{
+
+        font-size: 15px;
+    }
+    .start{
+        width: 60%;
+        height:37px;
+        margin-left: 70px;
+        
+    }
+   .start1{
+    width: 27%;
+    height: 40px;
+    margin-left: 125px;
+   }
+   #registerForm{
+    padding-top: 5px;
+   }
+.photo3{
+    margin-top: 25px;
+}
+}
+@media only screen and (max-width: 480px){
+   .photo3{
+    display: none;
+   }
+    #contaner{
+        margin-top: 2px;
+        width: 100%;
+        margin-left: 5px;
+        height: 480px;
+    }
+    .start{
+        width: 65%;
+        height:45px;
+        margin-left: 65px;
+        
+    }
+ 
+    .start1{
+        width: 27%;
+        height: 40px;
+        margin-left: 140px;
+       }
+       #registerForm{
+        padding-top: 10px;
+       }
+
+}
+
+
+
+
+
+
+
+
