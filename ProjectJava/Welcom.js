@@ -12,10 +12,10 @@ let welcome = document.getElementById("Welcome");
 window.addEventListener("load", () => {
     // Display the name 
     // startNow.textContent = y[y.length - 1].name;
-    let currentUser = 'Shatha Rababah';
-    startNow.textContent = currentUser;
+    // let currentUser = 'Shatha Rababah';
     
-
+let FullName= localStorage.getItem("currentUserName")
+startNow.textContent = FullName;
     
 
 
@@ -28,11 +28,11 @@ window.addEventListener("load", () => {
     
 
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (FullName) => {
         let myArray = JSON.parse(localStorage.getItem("completedUsers"));
         let w = false;
         for (let i = 0; i < myArray.length; i++) {
-            if (currentUser == myArray[i]) {
+            if (FullName == myArray[i]) {
                 welcome.textContent = "You're complete it";
                 alert("Go to results");
                 w = true
@@ -41,10 +41,11 @@ window.addEventListener("load", () => {
         }
 
         if (w == false) {
-              myArray.push(currentUser);
+              myArray.push(FullName);
                 localStorage.setItem("completedUsers",JSON.stringify(myArray));
                 alert('go to exam');
         }
+
 
 
 
