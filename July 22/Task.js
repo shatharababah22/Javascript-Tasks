@@ -38,6 +38,15 @@ function displayTasks() {
   localStorage.setItem("Tasks", JSON.stringify(storedData));
 }
 
+taskList.addEventListener("click", (event) => {
+  if (event.target.classList.contains("Update")) {
+    let UpdateTask=prompt("Update new task","e.g Task 8")
+    let Newtext=event.target.parentNode.childNodes[0]
+    console.log(Newtext)
+    Newtext.textContent=`${UpdateTask}`
+  }
+  
+});
 
 
 
