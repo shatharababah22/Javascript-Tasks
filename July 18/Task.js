@@ -1,6 +1,7 @@
 fetch('https://fakestoreapi.com/products')
-            .then(x=>x.json())
+            .then((x)=>x.json())
             .then(shatha=>  {
+                
                 let button = document.getElementById('button');
                 button.addEventListener("click",function(){
                 for (let i = 0; i < 4; i++) {   

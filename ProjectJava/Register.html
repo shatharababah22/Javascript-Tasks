@@ -1,101 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="Register.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/quiz.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <div class="container-fluid">
-        <div class="row">
-       
-          <div class="col-sm-6 ">
-         <img src="./image_png (16).png" class="photo3 img-fluid">
-          </div>
-          <div class="col-sm-6">
-            <div id="contaner" >
-                <h1 class="h1">Registration Now</h1>
-                <!-- <p>Please fill out this form with the required information</p>
-                <hr /> -->
-                <form id="registerForm" method="post" action="">
-                  <fieldset id="firstField">
-                    <label for="name"></label
-                    ><input  class="start" id="name" type="text"  placeholder="Enter Your name" required />
-          <br><br>
-                    <label for="email"></label
-                    ><input class="start"
-                      id="email"
-                      name="email"
-                      type="email"
-                      
-                      placeholder="Enter Your email"
-                      required
-                    /><br><br>
-                    <label for="new-password" ></label
-                    ><input class="start"
-                      id="new-password"
-                      type="password"
-                      
-                      placeholder="Enter Your Password"
-                      required
-                    /><br><br>
-                    <label for="confirm-password"></label
-                    ><input class="start"
-                      id="confirm-password"
-                      type="password"
-                      
-                      placeholder="Confirm Password"
-                      required
-                    />
-                  <!-- </fieldset>
-                  <hr />
-                  <fieldset id="secoundField">
-                    <label  class="start4">Gender:</label>
-          
-                    <label for="male" 
-                      ><input class="start2"
-                        type="radio"
-                        name="gender"
-                        id="male"
-                        value="male"
-                      />Male</label
-                    >
-                    <label for="female"
-                      ><input class="start2"
-                        type="radio"
-                        name="gender"
-                        id="female"
-                        value="female"
-                      />Female</label
-                    >
-                  </fieldset>
-                  <hr /> -->
-                  <fieldset>
-                    <input type="submit" value="Submit" id="submit" class="start1"/>
-                  </fieldset>
-                </form>
-              </div>
-          
-          </div>
-        </div>   
+    <header></header>
+    <div class="container">
+      <h1>Challenge Yourself With This Test</h1>
+      <div class="quiz_details">
+        <span class="numofquestion"
+          ><i class="fa fa-question" aria-hidden="true"></i
+        ></span>
+        <span class="time"
+          ><i class="fa fa-clock-o" aria-hidden="true"></i
+          ><span>Time left:</span>20:00</span
+        >
+      </div>
+      <hr />
+      <h2 id="title">IQ Test</h2>
+      <div class="quiz_progress">
+        <span class="numofquestion2"></span>
+      </div>
+      <h3 id="h3"></h3>
 
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <div class="option"></div>
+      <button class="next">Next</button>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Please choose your answer</p>
+      </div>
+    </div>
+    <div id="myModal1" class="modal">
+      <div class="modal-content">
+        <span id="IQ" class="close">&times;</span>
+        <p>now the English part started</p>
+      </div>
+    </div>
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span id="technical" class="close">&times;</span>
+        <p>now the technical part started</p>
+      </div>
+    </div>
+    <script src="/JS/quiz.js"></script>
   </body>
 </html>
