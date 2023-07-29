@@ -20,6 +20,9 @@ fetch("https://64bc1e5f7b33a35a44470dcc.mockapi.io/Tasks")
 
 
 
+
+
+
 // Load the tasks from the localStorage and display it
 function displayTasks() {
   let storedData = JSON.parse(localStorage.getItem("Tasks"));
@@ -36,17 +39,6 @@ function displayTasks() {
 }
 
 
-//delete task
-let AllButton =document.querySelectorAll(".delete")
-
-AllButton.forEach((el,index)=>{
-  AllButton[index].addEventListener("click",()=>{
- let targetButton=event.target.tagName
-
-  })
-
-
-}
 
 
 
@@ -55,7 +47,7 @@ AllButton.forEach((el,index)=>{
 addButton.addEventListener("click", () => {
   if (text.value !== "") {
     addTask(text.value);
-    text.value = ""; // Clear the input field after adding a task
+    text.value = "" // Clear the input field after adding a task
   }
 });
 
@@ -67,6 +59,37 @@ function addTask(textT) {
   localStorage.setItem("Tasks", JSON.stringify(storedData));
   displayTasks(); // Display the updated tasks after adding a new task
 }
+
+
+
+
+
+
+
+//delete task
+taskList.addEventListener("click", (event) => {
+  if (event.target.classList.contains("delete")) {
+    let targetButton = event.target.parentNode;
+    targetButton.remove();
+   console.log(targetButton.childNodes[0])
+    let storedData = JSON.parse(localStorage.getItem("Tasks"));
+    // Update the data in localStorage after deletion
+    storedData = storedData.filter((task) => task.Task !== targetButton.childNodes[0].textContent);
+
+    localStorage.setItem("Tasks", JSON.stringify(storedData));
+
+  }
+});
+
+
+
+
+
+//Update task
+
+
+
+
 
 
 
